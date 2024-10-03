@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPFMoreWindows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFMoreWindows"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
+        <StackPanel HorizontalAlignment="Left" Margin="50">
+            <Button x:Name="btn_1" Content="Start" Width="150" Height="30" Click="NavigateToStart" />
+            <Button x:Name="btn_2" Content="About " Width="150" Height="30" Click="NavigateToAbout" />
+            <Button x:Name="btn_3" Content="Info" Width="150" Height="30" Click="NavigateToInfo"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" >
+            <TextBox x:Name="InputBox" Text="Skiv ditt namn" Width="200" Height="auto" Margin="10" Padding="10" VerticalAlignment="Center" />
+            <Button Content="Next" Click="Button_Click" Width="120"/>
+        </StackPanel>
+    </Grid>
+</Window>
